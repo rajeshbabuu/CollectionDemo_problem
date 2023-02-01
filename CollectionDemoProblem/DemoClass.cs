@@ -8,10 +8,10 @@ namespace CollectionDemoProblem
 {
     public class DemoClass
     {
-        
-        
-            public void DictionaryDemo()
-            {
+
+
+        public void DictionaryDemo()
+        {
             Console.WriteLine("\n**********Dictionary Demo**********");
 
             Dictionary<int, string> objDictionary = new Dictionary<int, string>();
@@ -73,6 +73,19 @@ namespace CollectionDemoProblem
             }
             Console.WriteLine($"\nPoped element: {objPop}");
         }
-        
+        public void ListDemo()
+        {
+            Console.WriteLine("\n**********List Demo**********");
+
+            List<int> objList = new List<int>();
+            objList.Add(1);
+            objList.Add(2);
+            objList.Add(3);
+            objList.Add(4);
+            foreach (var element in objList)
+            {
+                Console.WriteLine(element);
+            }
+        }
     }
 }

@@ -12,21 +12,21 @@ namespace CollectionDemoProblem
         
             public void DictionaryDemo()
             {
-                Console.WriteLine("\n**********Dictionary Demo**********");
+            Console.WriteLine("\n**********Dictionary Demo**********");
 
-                Dictionary<int, string> objDictionary = new Dictionary<int, string>();
-                objDictionary.Add(1, "Person1");
-                objDictionary.Add(2, "Person2");
-                objDictionary.Add(3, "Person3");
+            Dictionary<int, string> objDictionary = new Dictionary<int, string>();
+            objDictionary.Add(1, "Person1");
+            objDictionary.Add(2, "Person2");
+            objDictionary.Add(3, "Person3");
 
-                Console.WriteLine("\nAccess value using key(key=1): " + objDictionary[1]);
+            Console.WriteLine("\nAccess value using key(key=1): " + objDictionary[1]);
 
-                Console.WriteLine("\nIterating Dictionary: ");
-                foreach (var element in objDictionary)
-                {
-                    Console.WriteLine($"Key = {element.Key} & Value = {element.Value}");
-                }
+            Console.WriteLine("\nIterating Dictionary: ");
+            foreach (var element in objDictionary)
+            {
+                Console.WriteLine($"Key = {element.Key} & Value = {element.Value}");
             }
+        }
 
         public void QueueDemo()
         {
@@ -54,5 +54,25 @@ namespace CollectionDemoProblem
                 Console.WriteLine(ObjEnumerator.Current);
             }
         }
+
+        public void StackDemo()
+        {
+            Console.WriteLine("\n**********Stack Demo**********");
+
+            Stack<string> objStack = new Stack<string>();
+            objStack.Push("a");
+            objStack.Push("b");
+            objStack.Push("c");
+            objStack.Push("d");
+            objStack.Push("e");
+
+            string objPop = objStack.Pop();
+            foreach (var element in objStack)
+            {
+                Console.WriteLine(element);
+            }
+            Console.WriteLine($"\nPoped element: {objPop}");
+        }
+        
     }
 }
